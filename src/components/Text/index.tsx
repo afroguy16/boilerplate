@@ -1,21 +1,25 @@
-import { createElement, Fragment, ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import { TextE } from "./enums";
+import { StyledP } from "./styles";
 
 export interface Prop {
   children: ReactNode,
-  element: TextE
+  as: TextE
 }
 
-const Text = ({children, element}: Prop): JSX.Element => {
-  const setupElement = () => {
-    const content = createElement(element, undefined, children);
-    return content;
+const Text = ({children, as}: Prop): JSX.Element => {
+  const getContent = () => {
+    switch (as) {
+      case TextE.P:
+        return <StyledP as={as}>{children}</StyledP>
+      case TextE.H1:
+        return <StyledP as={as}>{children}</StyledP>    
+      default:
+        return null;
+    }
   }
-
 	return (
-		<Fragment>
-      {setupElement()}
-    </Fragment>
+		<Fragment>{getContent()}</Fragment>
 	);
 }
 

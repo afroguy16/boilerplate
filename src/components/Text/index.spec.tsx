@@ -6,14 +6,14 @@ import { TextE } from './enums';
 describe('Text Component', () => {
   const children = 'Something works';
 
-  // it("should return a p tag if p is pass to the 'as' prop and children to be the same as children passed", () => {
-  //   const as = TextE.P;
-  //   const {baseElement} = render(<Text as={as}>{children}</Text>)
-  //   const element = baseElement.querySelector('p');
+  it("should return a p tag if p is pass to the 'as' prop and children to be the same as children passed", () => {
+    const as = TextE.P;
+    const {baseElement} = render(<Text as={as}>{children}</Text>)
+    const element = baseElement.querySelector('p');
     
-  //   expect(element).toBeTruthy();
-  //   expect(element?.innerHTML).toBe(children);
-  // })
+    expect(element).toBeTruthy();
+    expect(element?.innerHTML).toBe(children);
+  })
 
   // it("should return a h1 tag if h1 is pass to the 'as' prop and children to be the same as children passed", () => {
   //   const as = TextE.H1;

@@ -3,7 +3,7 @@ import { TextE } from "../../components/Text/enums";
 
 function Home() {
 	return (
-		<Text element={TextE.P}>Something works</Text>
+		<Text as={TextE.P}>Something works</Text>
 	);
 }
 
