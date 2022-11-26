@@ -14,7 +14,7 @@ const Text = ({children, element}: Prop): JSX.Element => {
 
 	return (
 		<Fragment>
-      {setupElement()}
+      {/* {setupElement()} */}
     </Fragment>
 	);
 }
